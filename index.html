@@ -7,6 +7,72 @@
 		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
 		<link rel="stylesheet" href="assets/css/main.css" />
 		<noscript><link rel="stylesheet" href="assets/css/noscript.css" /></noscript>
+		<style>
+			.project {
+				background-color: #f0f0f0;
+				padding: 15px;
+				margin-bottom: 20px;
+				border-radius: 5px;
+			}
+			.responsibilities {
+				display: none;
+				margin-top: 10px;
+			}
+			.view-more-btn {
+				background-color: #007bff;
+				color: white;
+				border: none;
+				padding: 8px 12px;
+				cursor: pointer;
+				border-radius: 4px;
+				font-size: 14px;
+				margin-top: 10px; /* Add some margin for spacing */
+			}
+			.view-more-btn:hover {
+				background-color: #0056b3;
+			}
+		</style>
+		<script>
+			function toggleResponsibilities(id) {
+				var element = document.getElementById(id);
+				var button = document.getElementById("btn-" + id);
+				
+				if (element.style.display === "none" || element.style.display === "") {
+					element.style.display = "block";
+					button.textContent = "View Less";
+		
+					// Move the button below the responsibilities content
+					element.parentNode.appendChild(button);
+				} else {
+					element.style.display = "none";
+					button.textContent = "View More";
+					
+					// Keep the button in the same div, just toggle content visibility
+					element.parentNode.appendChild(button);
+				}
+			}
+		
+			document.addEventListener("DOMContentLoaded", function() {
+				// Initialize the button's text
+				var btn = document.getElementById("btn-resp1");
+				btn.textContent = "View More"; // Set initial button text
+		
+				// Ensure the responsibilities are hidden initially
+				document.getElementById('resp1').style.display = "none";
+			});
+		</script>
+		
+		<!-- Scripts -->
+		<script src="assets/js/jquery.min.js"></script>
+		<script src="assets/js/browser.min.js"></script>
+		<script src="assets/js/breakpoints.min.js"></script>
+		<script src="assets/js/util.js"></script>
+		<script src="assets/js/main.js"></script>
+		<script>
+			document.addEventListener("DOMContentLoaded", function() {
+				document.querySelector('body').classList.remove('is-preload');
+			});
+		</script>
 	</head>
 	<body class="is-preload">
 
@@ -55,15 +121,22 @@
 
 								<!-- Text stuff -->
 									<h2>A Bit About Myself</h2>
+									<!-- <div style="background-color: #f0f0f0; padding: 15px; margin-bottom: 20px; border-radius: 5px;"> -->
+
 									<p><b>Data Scientist</b> with nearly <i>2 years</i> of experience, specializing in Python, Tableau, Hadoop, and related tools. 
 									Proficient in analyzing complex data sets to extract actionable insights. Skilled in working both independently 
 									and collaboratively, with strong problem-solving abilities and a solid foundation in data science principles.</p>
+								<!-- </div> -->
 									<hr />
-									<header></header>
+									
+									<header>
 										<h2>Education</h2>
+										<!-- <div style="background-color: #f0f0f0; padding: 15px; margin-bottom: 20px; border-radius: 5px;"> -->
+
 										<p><strong><h3>Bachelor's Degree in Computer Science and Engineering </strong></h3>
 											Visvesvaraya Technological University <br>
 											CGPA: 8.53</p>
+											<!-- </div> -->
 									</header>
 									<hr />
 									<header>
@@ -75,8 +148,65 @@
 										<article>
 										</article>
 										<p><strong><h3>Highlighted Projects</h3></strong></p>
+										
+<div class="project">
+    <strong>Predictive Model for Type 2 Diabetes</strong>
+    <p>Developed an advanced machine learning model to predict the likelihood of Type 2 Diabetes using metabolite profiles derived from blood samples. This project aimed to assist in early diagnosis and personalized treatment planning.</p>
+    <button class="button " id="btn-resp1" onclick="toggleResponsibilities('resp1')">View More</button>
+    <div class="responsibilities" id="resp1">
+        <p><b>Responsibilities:</b></p>
+        <ul>
+            <li>Data Preprocessing: Performed data cleaning and normalization to prepare raw blood sample data for analysis.</li>
+            <li>Feature Selection: Conducted feature engineering and selection to identify key predictors of Type 2 Diabetes, enhancing model performance.</li>
+            <li>Model Training: Applied a range of machine learning algorithms, including RandomForest and Gradient Boosting, to build and train predictive models.</li>
+            <li>Performance Evaluation: Evaluated model accuracy, precision, recall, and F1-score using cross-validation and performance metrics to ensure robustness and reliability.</li>
+        </ul>
+    </div>
+</div>
 
-											<ol>
+<div class="project">
+    <strong>Gene Resistance Classification</strong>
+    <p>Applied machine learning techniques to classify gene resistance against various drugs, contributing to the understanding of genetic factors influencing drug efficacy.</p>
+    <button class="button" id="btn-resp2" onclick="toggleResponsibilities('resp2')">View More</button>
+    <div class="responsibilities" id="resp2">
+        <p><b>Responsibilities:</b></p>
+        <ul>
+            <li>Data Preparation: Processed and transformed genomic and pharmacological data for use in classification models.</li>
+            <li>Model Development: Developed and optimized classification models using algorithms such as Support Vector Machines and Neural Networks to classify gene-drug interactions.</li>
+            <li>Result Analysis: Analyzed model outputs to identify patterns and insights related to gene resistance, supporting drug development and resistance studies.</li>
+        </ul>
+    </div>
+</div>
+
+<div class="project">
+    <strong>Head and Neck Cancer Data Analysis</strong>
+    <p>Conducted a comprehensive analysis of data related to head and neck cancer, including the development of a specialized database and visualization tools.</p>
+    <button class="button " id="btn-resp3" onclick="toggleResponsibilities('resp3')">View More</button>
+    <div class="responsibilities" id="resp3">
+        <p><b>Responsibilities:</b></p>
+        <ul>
+            <li>Database Development: Designed and implemented the Head and Neck Drug Resistance Database using SQL and Django, facilitating detailed data storage and retrieval.</li>
+            <li>Visualization Tool: Created an interactive gene visualization tool using Django and Matplotlib to enable intuitive exploration of cancer-related data.</li>
+            <li>Efficiency Improvement: Streamlined data processing workflows, achieving a 50% reduction in processing time, and supported over 50 researchers and users with the optimized tools.</li>
+        </ul>
+    </div>
+</div>
+
+<div class="project">
+    <strong>NLP-Based Chatbot Development</strong>
+    <p>Designed and implemented an NLP-based chatbot to facilitate interactive communication and user engagement.</p>
+    <button class="button " id="btn-resp4" onclick="toggleResponsibilities('resp4')">View More</button>
+    <div class="responsibilities" id="resp4">
+        <p><b>Responsibilities:</b></p>
+        <ul>
+            <li>Algorithm Implementation: Integrated various Natural Language Processing algorithms and vectorization techniques, including TF-IDF and Word2Vec, to enable effective understanding and response generation.</li>
+            <li>Chatbot Development: Developed and deployed the chatbot, incorporating features for dynamic interaction and continuous learning to enhance user experience.</li>
+        </ul>
+    </div>
+</div>
+										
+
+											<!-- <ol>
 											<li>
 												<strong>Predictive Model for Type 2 Diabetes</strong>
 												<p>Description: Developed an advanced machine learning model to predict the likelihood of Type 2 Diabetes using metabolite profiles derived from blood samples. This project aimed to assist in early diagnosis and personalized treatment planning.</p>
@@ -120,7 +250,7 @@
 												<li>Chatbot Development: Developed and deployed the chatbot, incorporating features for dynamic interaction and continuous learning to enhance user experience.</li>
 												</ul>
 											</li>
-											</ol>
+											</ol> -->
 
 									</header>
 									<br>
@@ -128,6 +258,7 @@
 										<h3>Machine Learning Intern @ Knowledge Solutions India (Affiliation with Microsoft), Remote </h3>
 										<h4>February 2021 - April 2021</h4>
 										<p><strong><h3>Highlighted Projects</h3></strong></p>
+										<div style="background-color: #f0f0f0; padding: 15px; margin-bottom: 20px; border-radius: 5px;">
 										<strong>Insurance Cost Prediction Model</strong>
 
 											<ul>
@@ -136,7 +267,8 @@
 												<strong>Project Overview</strong>
 												<p>Developed and optimized a predictive model for estimating insurance costs using a variety of machine learning algorithms. This project was focused on understanding and applying different techniques to enhance model performance and ensure accuracy.</p>
 											</li>
-
+											<button class="button " id="btn-resp5" onclick="toggleResponsibilities('resp5')">View More</button>
+											<div class="responsibilities" id="resp5">
 											<li>
 												<strong>Responsibilities and Learning Outcomes</strong>
 												<ul>
@@ -162,10 +294,11 @@
 												</li>
 												</ul>
 											</li>
+										</div>
 											</ul>
 
 
-											
+										</div>
 
 									</header>
 									<hr/>
