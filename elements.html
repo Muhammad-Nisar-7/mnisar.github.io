@@ -12,6 +12,16 @@
 				<link rel="stylesheet" href="assets/css/main.css" />
 				<noscript><link rel="stylesheet" href="assets/css/noscript.css" /></noscript>
 			</head>
+            <style>
+                @keyframes blink {
+                    0% { color: lightgreen; }
+                    50% { color: darkgreen; }
+                    100% { color: lightgreen; }
+                }
+                .blinking {
+                    animation: blink 2s infinite;
+                }
+            </style>
 			<body class="is-preload">
 		
 				<!-- Wrapper -->
@@ -76,13 +86,32 @@
 								<!-- Featured Post -->
 									<article class="post featured">
 										<header class="major">
-											<h2><a >Kidney Disease Classification<br />
-												Deep Learning</a></h2>
-											<p></p>
+											<h2><a >Kidney Disease<br />
+												Classifier</a></h2>
+                                                <h3>🟢<span class="blinking">ONGOING</span></h3>
+
+                                                <div style="text-align: justify;">
+                                                    <p>
+                                                      Currently developing a deep learning model to classify kidney diseases using advanced data science techniques. The project incorporates a structured workflow and CI/CD practices for efficient development and deployment, emphasizing scalability with AWS.
+                                                    </p>
+                                                    <p><strong>Key Components and Future Plans:</strong></p>
+                                                    <ul>
+                                                      <li><strong>Workflow Management:</strong> Continuous refinement for efficient updates.</li>
+                                                      <li><strong>Configuration Files:</strong> Managing config.yaml, secrets.yaml, and params.yaml for flexibility.</li>
+                                                      <li><strong>Pipeline Development:</strong> Enhancing data processing and model training.</li>
+                                                      <li><strong>Application Development:</strong> Integrating components via main.py and app.py.</li>
+                                                      <li><strong>DVC Integration:</strong> Ensuring data versioning and reproducibility.</li>
+                                                      <li><strong>CI/CD Implementation:</strong> Automating testing and deployment processes.</li>
+                                                      <li><strong>AWS Utilization:</strong> Utilizing services like S3, Lambda, and SageMaker for scalability.</li>
+                                                    </ul>
+                                                  </div>
+                                                  
+                                                  
+                                                  
 										</header>
-										<a href="https://github.com/Muhammad-Nisar-7/Kidney-Disease-Classification" class="image main"><img src="images/CT-KIDNEY-2-0001.jpg" alt="" /></a>
+										<a href="https://github.com/Muhammad-Nisar-7/Kidney-Disease-Classification" class="image main"><img src="images/Kid.jpg" alt="" /></a>
 										<ul class="actions special">
-											<li><a href="https://ciods.in/drug_resistant/browseinput" class="button large">View Project</a></li>
+											<li><a href="https://github.com/Muhammad-Nisar-7/Kidney-Disease-Classification"  class="button large">View Progress</a></li>
 										</ul>
 									</article>
 		
@@ -155,7 +184,7 @@
 													EnsembleBoost</a></h2>
 											</header>
 											<a href="https://github.com/Muhammad-Nisar-7/MushroomClassifier-EnsembleBoost" class="image fit"><img src="images/mush.jpg" alt="" /></a>
-											<p>Poisonous Mushroom Classification: Achieved 0.98439 Accuracy with Ensemble RandomForest and XGBoost.</p>
+											<p>I successfully classified poisonous mushrooms with an accuracy of 0.98439 by leveraging an ensemble approach combining RandomForest and XGBoost algorithms, enhancing model performance through advanced feature engineering and cross-validation techniques.</p>
 											<ul class="actions special">
 												<li><a href="https://github.com/Muhammad-Nisar-7/MushroomClassifier-EnsembleBoost" class="button">View Project</a></li>
 											</ul>
