@@ -69,7 +69,25 @@
 .skill:hover {
     background-color: #f0f0f0; /* Hover effect */
 }
-
+@media (max-width: 768px) {
+	.skills-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 1px;
+	}
+    .skill {
+        width: 40%; /* Set to 45% to fit two in a row */
+        height: 100%; /* Allow height to adjust */
+		font-size: 7px;
+    }
+	.skill i {
+    margin-right: 5px; /* Space between icon and text */
+    font-size: 10px; /* Slightly smaller icon size */
+    color: #ff0000;
+    flex-shrink: 0; /* Prevents icon from shrinking */
+}
+}
 
 
 		</style>
