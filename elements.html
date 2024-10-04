@@ -21,7 +21,71 @@
                 .blinking {
                     animation: blink 2s infinite;
                 }
-            </style>
+				.project {
+					background-color: #f0f0f0;
+					padding: 15px;
+					margin-bottom: 20px;
+					border-radius: 5px;
+				}
+				.responsibilities {
+					display: none;
+					margin-top: 10px;
+				}
+				.view-more-btn {
+					background-color: #007bff;
+					color: white;
+					border: none;
+					padding: 8px 12px;
+					cursor: pointer;
+					border-radius: 4px;
+					font-size: 14px;
+					margin-top: 10px; /* Add some margin for spacing */
+				}
+				.view-more-btn:hover {
+					background-color: #0056b3;
+				}
+			</style>
+			<script>
+				function toggleResponsibilities(id) {
+					var element = document.getElementById(id);
+					var button = document.getElementById("btn-" + id);
+					
+					if (element.style.display === "none" || element.style.display === "") {
+						element.style.display = "block";
+						button.textContent = "View Less";
+			
+						// Move the button below the responsibilities content
+						element.parentNode.appendChild(button);
+					} else {
+						element.style.display = "none";
+						button.textContent = "View More";
+						
+						// Keep the button in the same div, just toggle content visibility
+						element.parentNode.appendChild(button);
+					}
+				}
+			
+				document.addEventListener("DOMContentLoaded", function() {
+					// Initialize the button's text
+					var btn = document.getElementById("btn-resp1");
+					btn.textContent = "View More"; // Set initial button text
+			
+					// Ensure the responsibilities are hidden initially
+					document.getElementById('resp1').style.display = "none";
+				});
+			</script>
+			
+			<!-- Scripts -->
+			<script src="assets/js/jquery.min.js"></script>
+			<script src="assets/js/browser.min.js"></script>
+			<script src="assets/js/breakpoints.min.js"></script>
+			<script src="assets/js/util.js"></script>
+			<script src="assets/js/main.js"></script>
+			<script>
+				document.addEventListener("DOMContentLoaded", function() {
+					document.querySelector('body').classList.remove('is-preload');
+				});
+			</script>
 			<body class="is-preload">
 		
 				<!-- Wrapper -->
@@ -94,6 +158,8 @@
                                                     <p>
                                                       Currently developing a deep learning model to classify kidney diseases using advanced data science techniques. The project incorporates a structured workflow and CI/CD practices for efficient development and deployment, emphasizing scalability with AWS.
                                                     </p>
+													<button class="button " id="btn-resp1" onclick="toggleResponsibilities('resp1')">View More</button>
+    											<div class="responsibilities" id="resp1">
                                                     <p><strong>Key Components and Future Plans:</strong></p>
                                                     <ul>
                                                       <li><strong>Workflow Management:</strong> Continuous refinement for efficient updates.</li>
@@ -104,6 +170,7 @@
                                                       <li><strong>CI/CD Implementation:</strong> Automating testing and deployment processes.</li>
                                                       <li><strong>AWS Utilization:</strong> Utilizing services like S3, Lambda, and SageMaker for scalability.</li>
                                                     </ul>
+													</div>
                                                   </div>
                                                   
                                                   
