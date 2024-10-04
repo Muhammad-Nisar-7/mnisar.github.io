@@ -7,6 +7,8 @@
 		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
 		<link rel="stylesheet" href="assets/css/main.css" />
 		<noscript><link rel="stylesheet" href="assets/css/noscript.css" /></noscript>
+		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+		
 		<style>
 			.project {
 				background-color: #f0f0f0;
@@ -31,6 +33,45 @@
 			.view-more-btn:hover {
 				background-color: #0056b3;
 			}
+			.skills-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 5px;
+}
+
+.skill {
+    display: flex;
+    align-items: center; 
+    justify-content: center;
+    width: 220px; /* Increased width for uniformity */
+    height: 100px; /* Fixed height for uniformity */
+    font-size: 14px; /* Font size remains small */
+    /* margin: 3px; 
+    padding: 3px;  */
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    background-color: #f9f9f9;
+    text-align: center; /* Ensures text is centered */
+    white-space: nowrap; /* Prevents text from wrapping */
+    overflow: hidden; /* Hides any overflow */
+    text-overflow: ellipsis; /* Adds ellipsis for overflowed text */
+}
+
+.skill i {
+    margin-right: 5px; /* Space between icon and text */
+    font-size: 20px; /* Slightly smaller icon size */
+    color: #ff0000;
+    flex-shrink: 0; /* Prevents icon from shrinking */
+}
+
+.skill:hover {
+    background-color: #f0f0f0; /* Hover effect */
+}
+
+
+
 		</style>
 		<script>
 			function toggleResponsibilities(id) {
@@ -311,7 +352,7 @@
 									<div class="row">
 										<div>
 
-											<h3>Technical Skills</h3>
+											<!-- <h3>Technical Skills</h3>
 											<ul>
 												<li><strong>PYTHON</strong>: pandas, numpy, scikit-learn, matplotlib, seaborn</li>
 												<li><strong>SQL</strong></li>
@@ -321,12 +362,76 @@
 												<li><strong>MACHINE LEARNING</strong>: scikit-learn, xgboost, lightgbm</li>
 												<li><strong>TABLEAU</strong></li>
 												<li><strong>JIRA</strong></li>
-											</ul>
+											</ul> -->
+											<div class="rn-resume-area rn-section-gap section-separator" id="resume">
+												<!-- <h2 style="text-align: center; color: #212020; ">Skills</h2> -->
+												<div class="skills-container" id="skills-container">
+													<!-- Skills will be injected here by JavaScript -->
+												</div>
+											</div>
+									
+									
+									
+									<div class="skills-container" style="color: black; font-weight: bold;">
+										<div class="skill">
+											<i class="fab fa-python"></i> Python
+										</div>
+										<div class="skill">
+											<i class="fas fa-database"></i> SQL
+										</div>
+										<div class="skill">
+											<i class="fas fa-fire-alt"></i> PySpark
+										</div>
+										<div class="skill">
+											<i class="fas fa-brain"></i> NLP
+										</div>
+										<div class="skill">
+											<i class="fas fa-robot"></i> Machine Learning
+										</div>
+										<div class="skill">
+											<i class="fas fa-chart-bar"></i> Tableau
+										</div>
+										<div class="skill">
+											<i class="fas fa-chart-line"></i> Data Analysis
+										</div>
+										<div class="skill">
+											<i class="fas fa-search"></i> Data Mining
+										</div>
+										<div class="skill">
+											<i class="fas fa-cloud-upload-alt"></i> Model Deployment
+										</div>
+										<div class="skill">
+											<i class="fas fa-cogs"></i> API Development
+										</div>
+										<div class="skill">
+											<i class="fab fa-aws"></i> AWS
+										</div>
+										<div class="skill">
+											<i class="fas fa-tasks"></i> JIRA
+										</div>
+									</div><br>
 											
 
-											<h3>Soft Skills</h3>
-											<p>Problem-Solving | Communication | Critical Thinking | Attention to Detail | Curiosity</p>
-
+											<h2>Soft Skills</h2>
+											<div class="skills-container" style="color: black; font-weight: bold;">
+											<!-- <p>Problem-Solving | Communication | Critical Thinking | Attention to Detail | Curiosity</p> -->
+											<div class="skill">
+												<i class="fas fa-lightbulb"></i> Problem-Solving
+											</div>
+											<div class="skill">
+												<i class="fas fa-comments"></i> Communication
+											</div>
+											<div class="skill">
+												<i class="fas fa-cogs"></i> Critical Thinking
+											</div>
+											<div class="skill">
+												<i class="fas fa-eye"></i> Attention to Detail
+											</div>
+											<div class="skill">
+												<i class="fas fa-search-plus"></i> Curiosity
+											</div>
+											
+										</div>
 
 										</div>
 										
